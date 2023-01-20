@@ -17,16 +17,474 @@
     <link rel="icon" href="assets/images/icons/logo-icon.svg" type="image/gif" sizes="20x20" />
     <!-- Place favicon.ico in the root directory -->
 
+    <!-- Bootstrap 5.3.0-alpha1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icon 1.10.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+      integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Boxicons 2.1.4 -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="assets/css/custom.css" />
 
     <meta name="theme-color" content="#101010" />
   </head>
 
   <body>
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <!-- ====== sidebar start ======== -->
+    <div class="main-nav-wrapper">
+      <div class="main-nav-js">
+        <div class="menu-close-btn"><i class="bi bi-x-lg"></i></div>
+        <div class="mobile-logo-area d-flex justify-content-start align-items-center">
+          <div class="header-logo">
+            <a href="index.html"><img alt="image" class="img-fluid" src="assets/images/bg/header-logo.svg" /></a>
+          </div>
+        </div>
+        <div class="sidebar-menu-area">
+          <ul class="menu-list">
+            <li class="menu-item-has-children menu-item">
+              <a href="#" class="drop-down" data-hover="Home"> Home</a><i class="bi bi-plus dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="index.html">Home One</a></li>
+                <li><a href="index2.html">Home Two</a></li>
+                <li><a href="index-pagination-slider.html">Home Pagination Slider</a></li>
+                <li><a href="index-masonary.html">Home Masonary</a></li>
+                <li><a href="index-carousel.html">Home Carousel</a></li>
+                <li><a href="index-portfolio.html">Home Portfolio</a></li>
 
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+                <li><a href="index-video.html">Home Video</a></li>
+                <li><a href="index-center-slider.html">Home Center Slide</a></li>
+                <li><a href="index-bg-image.html">Home Image Background</a></li>
+                <li><a href="index-fixed-sidebar.html">Home Fixed Sidebar</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-item-has-children menu-item">
+              <a href="#" class="drop-down" data-hover="About"> About</a><i class="bi bi-plus dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children menu-item">
+              <a href="portfolio-column-four.html" data-hover="Portfolio"> Portfolio</a><i class="bi bi-plus dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="portfolio-column-two.html">Portfolio Grid 02</a></li>
+                <li><a href="portfolio-column-three.html">Portfolio Grid 03</a></li>
+                <li><a href="portfolio-column-four.html">Portfolio Grid 04</a></li>
+                <li><a href="portfolio-text-down.html">Portfolio Text Down</a></li>
+                <li><a href="portfolio-details.html">Portfolio Details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children menu-item">
+              <a href="#" class="drop-down" data-hover="Pages"> Pages</a><i class="bi bi-plus dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="gallery-column-four.html">Gallery Column Four</a></li>
+                <li><a href="gallery-fullwidth.html">Gallery Full Width</a></li>
+                <li><a href="gallery-parallax.html">Gallery Parallax</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="client.html">Client</a></li>
+                <li><a href="service-one.html">Services</a></li>
+                <li><a href="team-one.html">Team One</a></li>
+                <li><a href="team-two.html">Team Two</a></li>
+                <li><a href="faq.html">Faq</a></li>
+                <li><a href="testimonial.html">Testimonial</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="error.html">Error</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children menu-item">
+              <a href="blog-grid-one.html" data-hover="Blog">Blog</a><i class="bi bi-plus dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="blog-grid-one.html">Blog Grid One</a></li>
+                <li><a href="blog-standard-one.html">Blog Standard 01</a></li>
+                <li><a href="blog-standard-two.html">Blog Standard 02</a></li>
+                <li><a href="blog-standard-three.html">Blog Standard 03</a></li>
+                <li><a href="blog-details.html">Blog Details</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-item-has-children menu-item">
+              <a href="#" class="drop-down" data-hover="Contact"> Contact</a><i class="bi bi-plus dropdown-icon"></i>
+              <ul class="sub-menu">
+                <li><a href="contact-me.html">Contact Me</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-social d-flex justify-content-center gap-5">
+          <a href="https://www.instagram.com/"><img src="assets/images/icons/instagram.svg" alt="image" /></a>
+          <a href="https://www.dribbble.com/"><img src="assets/images/icons/dribbble.svg" alt="image" /></a>
+          <a href="https://www.pinterest.com/"><img src="assets/images/icons/pinterest.svg" alt="image" /></a>
+          <a href="https://www.twitter.com/"><img src="assets/images/icons/Twitter.svg" alt="image" /></a>
+        </div>
+      </div>
+    </div>
+    <!-- ====== sidebar end ======== -->
+
+    <div class="main-page-wrapper">
+      <div class="left-fixed-image">
+        <img src="https://i.pinimg.com/originals/a0/43/28/a04328e8f6591166764b1941b08b15d0.jpg" alt="image" />
+      </div>
+      <div class="right-fixed-social">
+        <ul class="social-three">
+          <li>
+            <a href="https://github.com/overdrivemachines" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="left" data-bs-content="Github"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://codepen.io/overdrivemachines" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="left" data-bs-content="Codepen"
+              ><i class="bx bxl-codepen"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/dipen-chauhan-5026a1143/"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover focus"
+              data-bs-placement="left"
+              data-bs-content="LinkedIn"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://dev.to/overdrivemachines" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="left" data-bs-content="DEV"
+              ><i class="bx bxl-dev-to"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-content">
+        <!-- ========== header============= -->
+        <header class="header-area style-1">
+          <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="header-logo">
+              <a href="index.html"
+                ><img alt="Logo" class="img-fluid" src="https://raw.githubusercontent.com/overdrivemachines/dipen_chauhan/master/app/assets/images/logo.png"
+              /></a>
+            </div>
+
+            <div class="sidebar-button mobile-menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </header>
+        <!-- ========== header end============= -->
+
+        <!-- ========== banner-section start============= -->
+
+        <div class="section-common banner-section-one d-flex flex-column">
+          <div class="banner-mobile-image d-lg-none d-block">
+            <img src="assets/images/bg/portfolio-image-1.png" alt="image" />
+          </div>
+          <div class="banner-one-content">
+            <div class="banner-one-circle">
+              <div class="circle-text-common circel-tex-area1">
+                <img src="assets/images/icons/camera-icon.svg" alt="image" />
+                <p id="CircleTypeText1" class="circle-text">Photographer Creat&nbsp;</p>
+              </div>
+            </div>
+
+            <span class="subtitle">Photographer</span>
+            <h2 class="title text2">Johom <span class="title-padding">Dainok</span></h2>
+            <p class="description">Phasellus scelerisque turpis sed eros tristique, eu fringilla eros placerat. Pellentesque at maximus sapien, a dictum lectus.</p>
+            <a href="portfolio-column-two.html" class="eg-btn btn--primary btn--lg">View My Profile</a>
+          </div>
+        </div>
+
+        <!-- ========== banner-section end============= -->
+
+        <!-- ========== about-me start============= -->
+
+        <div class="section-common about-me-section">
+          <div class="container-fluid">
+            <div class="about-me-content-1">
+              <span>The Studio</span>
+              <h2>Hello my name is Johnal Dainok. I’m editorial photographer.</h2>
+              <p>
+                My name is Johnal Dainok. I live in Ohio, USA. I’ve been a photographer for over 15 years now. I started getting on into photography when my family moved from
+                Nevada to Ohio. Onar Switching places from such a young age tou made it possible for me to see many different andr places besides my hometown.
+              </p>
+            </div>
+            <!-- conter -->
+            <div class="row justify-content-start">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="counter-single style-two">
+                  <div class="coundown d-flex flex-column">
+                    <h2 class="odometer" data-odometer-final="15">00</h2>
+                    <p class="mb-0">Years Of Experience</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="counter-single style-two">
+                  <div class="coundown d-flex flex-column">
+                    <h2 class="odometer" data-odometer-final="12">00</h2>
+                    <p class="mb-0">Awards Win</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="counter-single style-two add-k">
+                  <div class="coundown d-flex flex-column">
+                    <h2 class="odometer" data-odometer-final="10">00</h2>
+                    <p class="mb-0">Awesome Photos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- experience -->
+            <div class="experience-block style-two">
+              <h2>Experience</h2>
+              <p>My name is Johnal Dainok. I live in Ohio, USA. I’ve been a photographer for over 15 years now. I started getting on into photography when my family moved from.</p>
+              <ul class="skills-bar-container">
+                <li>
+                  <div class="progressbar-title">
+                    <h6>Photography</h6>
+                    <span class="percent" id="html-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar" id="progress-html"></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="progressbar-title">
+                    <h6>Video Graphy</h6>
+                    <span class="percent" id="css-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar" id="progress-css"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="progressbar-title">
+                    <h6>Portrait</h6>
+                    <span class="percent" id="javascript-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar" id="progress-javascript"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== about-me end============= -->
+
+        <!-- ========== portfolio start============= -->
+
+        <div class="section-common portfolio-section pt-120">
+          <div class="row">
+            <div class="section-title-three text-center">
+              <div class="water-text">Portfolio</div>
+              <h2>Portfolio</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center g-4">
+            <div class="col-lg-4 col-md-6 col-sm-6 grid-item wedding">
+              <div class="portfolio-single-one style-three magnetic-item">
+                <img class="img-fluid" src="assets/images/portfolio/portfolio2-1.png" alt="image" />
+                <div class="overlay">
+                  <div class="content">
+                    <h3><a data-cursor="View<br>Details" href="portfolio-details.html">Wedding Photography</a></h3>
+                    <span>Photographer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 grid-item Wedding Fashion">
+              <div class="portfolio-single-one style-three magnetic-item">
+                <img class="img-fluid" src="assets/images/portfolio/portfolio2-3.png" alt="image" />
+                <div class="overlay">
+                  <div class="content">
+                    <h3><a data-cursor="View<br>Details" href="portfolio-details.html">Creative Photography</a></h3>
+                    <span>Photographer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 grid-item Lifestyle">
+              <div class="portfolio-single-one style-three magnetic-item">
+                <img class="img-fluid" src="assets/images/portfolio/portfolio2-4.png" alt="image" />
+                <div class="overlay">
+                  <div class="content">
+                    <h3><a data-cursor="View<br>Details" href="portfolio-details.html">Travel Photography.</a></h3>
+                    <span>Photographer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 grid-item Lifestyle Nature Wedding">
+              <div class="portfolio-single-one style-three magnetic-item">
+                <img class="img-fluid" src="assets/images/portfolio/portfolio2-1.png" alt="image" />
+                <div class="overlay">
+                  <div class="content">
+                    <h3><a data-cursor="View<br>Details" href="portfolio-details.html">Nature Photography</a></h3>
+                    <span>Photographer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 grid-item Lifestyle">
+              <div class="portfolio-single-one style-three magnetic-item">
+                <img class="img-fluid" src="assets/images/portfolio/portfolio2-2.png" alt="image" />
+                <div class="overlay">
+                  <div class="content">
+                    <h3><a data-cursor="View<br>Details" href="portfolio-details.html">Art Photography</a></h3>
+                    <span>Photographer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 grid-item Wedding Nature">
+              <div class="portfolio-single-one style-three magnetic-item">
+                <img class="img-fluid" src="assets/images/portfolio/portfolio2-5.png" alt="image" />
+                <div class="overlay">
+                  <div class="content">
+                    <h3><a data-cursor="View<br>Details" href="portfolio-details.html">Business Photography</a></h3>
+                    <span>Photographer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== portfolio end============= -->
+
+        <!-- ========== my package  start============= -->
+
+        <div class="section-common package-section pt-120">
+          <div class="row">
+            <div class="section-title-three text-center">
+              <div class="water-text">What I Do</div>
+              <h2>What I Do</h2>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="package-single">
+                <div class="packge-feature">
+                  <h3>Photography</h3>
+                  <ul class="feature-list">
+                    <li><img src="assets/images/icons/list-circle-arrow.svg" alt="image" />200 Personal Photograph.</li>
+                    <li><img src="assets/images/icons/list-circle-arrow.svg" alt="image" />5 Hour To 8 Hour Duration.</li>
+                  </ul>
+                </div>
+                <a href="booking.html" class="eg-btn btn--primary btn--lg">Book Now</a>
+                <div class="package-price">
+                  <h6>Start Form</h6>
+                  <span>$200</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="package-single">
+                <div class="packge-feature">
+                  <h3>Videography</h3>
+                  <ul class="feature-list">
+                    <li><img src="assets/images/icons/list-circle-arrow.svg" alt="image" />200 Personal Photograph.</li>
+                    <li><img src="assets/images/icons/list-circle-arrow.svg" alt="image" />5 Hour To 8 Hour Duration.</li>
+                  </ul>
+                </div>
+                <a href="booking.html" class="eg-btn btn--primary btn--lg">Book Now</a>
+                <div class="package-price">
+                  <h6>Start Form</h6>
+                  <span>$250</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="package-single">
+                <div class="packge-feature">
+                  <h3>Photo Edit</h3>
+                  <ul class="feature-list">
+                    <li><img src="assets/images/icons/list-circle-arrow.svg" alt="image" />200 Personal Photograph.</li>
+                    <li><img src="assets/images/icons/list-circle-arrow.svg" alt="image" />5 Hour To 8 Hour Duration.</li>
+                  </ul>
+                </div>
+                <a href="booking.html" class="eg-btn btn--primary btn--lg">Book Now</a>
+                <div class="package-price">
+                  <h6>Start Form</h6>
+                  <span>$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== my package end============= -->
+
+        <!-- ========== contact-section start============= -->
+
+        <div class="section-common contact-section pt-120 pb-120 mb-44">
+          <div class="row">
+            <div class="section-title-three text-center">
+              <div class="water-text">Get In Touch</div>
+              <h2>Get In Touch</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 col-lg-12">
+              <form class="contact-me-form">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-inner">
+                      <input type="text" placeholder="Enter your name" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-inner">
+                      <input type="text" placeholder="Enter your email" />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-inner">
+                      <input type="text" placeholder="Querry" />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-inner">
+                      <textarea rows="6" placeholder="Write Your message"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="eg-btn btn--primary btn--lg">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========contact-section end============= -->
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/my_script.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
