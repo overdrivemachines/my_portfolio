@@ -3098,6 +3098,9 @@ header.style-2 {
     height: 258px;
     width: auto;
     object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .content1 {
@@ -3135,13 +3138,15 @@ header.style-2 {
   }
 
   .content {
-    padding: 20px;
+    padding: 20px 0;
+    // border: 1px solid var(--border-color);
     // text-align: center;
     h3 {
       padding-top: 5px;
       font-size: 25px;
       font-weight: 600;
       line-height: 1.35;
+      margin-bottom: 0;
 
       @include lg-device() {
         font-size: 24px;
@@ -3158,8 +3163,12 @@ header.style-2 {
         font-weight: 600;
       }
     }
-    span {
+    p {
       padding-left: 0px;
+      margin: 0;
+    }
+    a {
+      color: var(--white);
     }
   }
 

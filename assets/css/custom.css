@@ -3116,6 +3116,9 @@ header.style-2 .menu-list > li.menu-item-has-children:hover .submenu {
   height: 258px;
   width: auto;
   object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .portfolio-single-one .content1 h3 {
   margin-bottom: 0px;
@@ -3157,13 +3160,14 @@ header.style-2 .menu-list > li.menu-item-has-children:hover .submenu {
   }
 }
 .portfolio-single-one .content {
-  padding: 20px;
+  padding: 20px 0;
 }
 .portfolio-single-one .content h3 {
   padding-top: 5px;
   font-size: 25px;
   font-weight: 600;
   line-height: 1.35;
+  margin-bottom: 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .portfolio-single-one .content h3 {
@@ -3183,8 +3187,12 @@ header.style-2 .menu-list > li.menu-item-has-children:hover .submenu {
     font-weight: 600;
   }
 }
-.portfolio-single-one .content span {
+.portfolio-single-one .content p {
   padding-left: 0px;
+  margin: 0;
+}
+.portfolio-single-one .content a {
+  color: var(--white);
 }
 .portfolio-single-one .overlayy {
   position: absolute;
