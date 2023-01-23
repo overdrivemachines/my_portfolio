@@ -21,6 +21,7 @@ Building my portfolio site dipenchauhan.com
     UI/UX Design, Backend Development, New Businesses, Startups, ... https://bepatrickdavid.com/
   - Contact - Have a question or want to work together?
 - Jobs - https://arc.dev/
+- Masonry Portfolio - http://macyjs.com/
 
 # References
 
