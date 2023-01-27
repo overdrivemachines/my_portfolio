@@ -2,7 +2,7 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
 const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl));
 
 /* ---------------------------------------------
-     mobile-menu
+Mobile-menu
 --------------------------------------------- */
 const navSlide = () => {
   const burger = document.querySelector(".mobile-menu-btn");
@@ -42,7 +42,7 @@ const navSlide = () => {
 navSlide();
 
 /* ---------------------------------------------
-   mobile-drop-down
+mobile-drop-down
 --------------------------------------------- */
 
 // $(".main-nav-js .bi").on("click", function (event) {
@@ -60,7 +60,7 @@ navSlide();
 // });
 
 /* ---------------------------------------------
-     circletype
+Circletype
 --------------------------------------------- */
 let CircleTypeText1 = document.getElementById("CircleTypeText1");
 if (CircleTypeText1 != null) {
@@ -68,7 +68,7 @@ if (CircleTypeText1 != null) {
 }
 
 /* ---------------------------------------------
-     portfolio filter
+Portfolio Filter
 --------------------------------------------- */
 
 // Array of "#portfolioCategories .filter" elements
@@ -128,3 +128,32 @@ function updateFilters(e) {
 
 // When a portfolio category is clicked call the updateFilters function
 portfolioCategoriesEl.forEach((cat) => cat.addEventListener("click", updateFilters));
+
+/* ---------------------------------------------
+My Name Text Effect
+--------------------------------------------- */
+const myNameEl = document.querySelector(".my-name");
+
+// Wrap each letter with a span.letter
+myNameEl.innerHTML = myNameEl.innerText.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+// Array of span.letter elements
+const lettersArray = gsap.utils.toArray("span.letter");
+
+// Create a new timeline
+let myNameTimeline = new TimelineMax({ repeat: -1 });
+
+myNameTimeline
+  .staggerFrom(
+    lettersArray,
+    0.5,
+    {
+      top: "+=25px",
+      rotation: "-=-3deg",
+      alpha: 0,
+      scale: 0.8,
+      ease: Power1.easeOut,
+    },
+    0.15
+  )
+  .to(lettersArray, 0.5, { alpha: 0, ease: Power1.easeOut }, "+=1.2");

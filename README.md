@@ -22,6 +22,7 @@ Building my portfolio site dipenchauhan.com
   - Contact - Have a question or want to work together?
 - Jobs - https://arc.dev/
 - Masonry Portfolio - http://macyjs.com/
+- Parallax - https://simpleparallax.com/
 
 # References
 
