@@ -78,7 +78,10 @@ const portfolioItemsEl = gsap.utils.toArray(".portfolio-item");
 
 function updateFilters(e) {
   // capture the current state of portfolioItemsEl
-  const state = Flip.getState(portfolioItemsEl);
+  const itemsState = Flip.getState(portfolioItemsEl);
+
+  // capture the current state of the .portfolio-item's parent
+  const containerState = Flip.getState(".portfolio-item-container");
 
   //
   let selectedCategoryEl = e.target;
@@ -106,13 +109,19 @@ function updateFilters(e) {
     portfolioItemsEl.forEach((i) => (i.style.display = i.dataset.category == selectedCategory ? "block" : "none"));
   }
 
-  // Animate from the previous state
-  Flip.from(state, {
+  // Animate .portfolio-item elements from the previous state
+  Flip.from(itemsState, {
     duration: 1,
     scale: true,
     ease: "power1.inOut",
     onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 1 }),
     onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: 0, duration: 1 }),
+  });
+
+  // Animate .portfolio-item-container elements from the previous state
+  Flip.from(containerState, {
+    duration: 1,
+    ease: "power1.inOut",
   });
 }
 

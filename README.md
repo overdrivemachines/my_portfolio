@@ -34,3 +34,4 @@ Building my portfolio site dipenchauhan.com
   - https://tamalsen.dev/
   - https://armaizadenwala.com/
   - https://jhey.dev/
+- GSAP fix parent height: https://greensock.com/forums/topic/35523-how-to-animate-the-height-of-the-parent
