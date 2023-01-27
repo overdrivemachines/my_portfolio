@@ -7,6 +7,7 @@ Mobile-menu
 const burger = document.querySelector(".mobile-menu-btn");
 const nav = document.querySelector(".main-nav-js");
 const navLinks = document.querySelectorAll(".main-nav-js .menu-list .menu-item");
+const miLinks = gsap.utils.toArray(".mi-link");
 
 const menuCloseBtn = document.querySelector(".menu-close-btn");
 
@@ -20,6 +21,11 @@ function addAnimationToNavLinks() {
   });
 }
 
+function hideMenu() {
+  nav.classList.remove("show-menu");
+  addAnimationToNavLinks();
+}
+
 // When the burger button is clicked, show the menu and add animation to the nav links
 burger.addEventListener("click", () => {
   nav.classList.add("show-menu");
@@ -29,9 +35,15 @@ burger.addEventListener("click", () => {
 
 // When the close button is clicked, hide the menu and add animation to the nav links
 menuCloseBtn.addEventListener("click", () => {
-  nav.classList.remove("show-menu");
-  addAnimationToNavLinks();
+  hideMenu();
   // burger.classList.toggle("toggle");
+});
+
+// When the menu links are clicked, hide the menu and add animation to the nav links
+miLinks.forEach((m) => {
+  m.addEventListener("click", () => {
+    hideMenu();
+  });
 });
 
 /* ---------------------------------------------
