@@ -2757,6 +2757,44 @@ header.style-2 .menu-list > li.menu-item-has-children:hover .submenu {
   margin-bottom: 0px;
 }
 
+.technologies-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+@media (max-width: 767px) {
+  .technologies-list {
+    justify-content: center;
+  }
+}
+.technologies-list li {
+  width: 100px;
+  text-align: center;
+}
+.technologies-list li a {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+}
+@media (max-width: 767px) {
+  .technologies-list li a {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+.technologies-list li img {
+  max-height: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
 .award-list {
   list-style: none;
   margin: 0;
