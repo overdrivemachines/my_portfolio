@@ -80,16 +80,23 @@ function updateFilters(e) {
   // capture the current state of portfolioItemsEl
   const state = Flip.getState(portfolioItemsEl);
 
+  //
+  let selectedCategoryEl = e.target;
+
+  // check if e.target is span element
+  if (selectedCategoryEl.tagName == "SPAN") {
+    // set selectedCategoryEl to the parent element which is a li.filter element
+    selectedCategoryEl = selectedCategoryEl.parentElement;
+  }
+
   // remove the .active class from all .filter elements
   portfolioCategoriesEl.forEach((cat) => cat.classList.remove("active"));
 
   // add the .active class for the element that was clicked
-  e.target.classList.add("active");
+  selectedCategoryEl.classList.add("active");
 
   // get the category that was clicked e.g. rails or javascript
-  const selectedCategory = e.target.dataset.filter;
-
-  console.log(selectedCategory);
+  const selectedCategory = selectedCategoryEl.dataset.filter;
 
   if (selectedCategory == "*") {
     // display all items
@@ -103,22 +110,21 @@ function updateFilters(e) {
   Flip.from(state, {
     duration: 1,
     scale: true,
-    absolute: true,
     ease: "power1.inOut",
     onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 1 }),
     onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: 0, duration: 1 }),
   });
 }
 
-gsap.from(".portfolio-item", {
-  duration: 2,
-  scale: 0.8,
-  opacity: 0,
-  delay: 0.5,
-  stagger: 0.2,
-  ease: "elastic",
-  force3D: true,
-});
+// gsap.from(".portfolio-item", {
+//   duration: 2,
+//   scale: 0.8,
+//   opacity: 0,
+//   delay: 0.5,
+//   stagger: 0.2,
+//   ease: "elastic",
+//   force3D: true,
+// });
 
 // When a portfolio category is clicked call the updateFilters function
 portfolioCategoriesEl.forEach((cat) => cat.addEventListener("click", updateFilters));
