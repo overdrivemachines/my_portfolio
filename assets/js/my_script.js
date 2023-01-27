@@ -66,3 +66,59 @@ let CircleTypeText1 = document.getElementById("CircleTypeText1");
 if (CircleTypeText1 != null) {
   new CircleType(CircleTypeText1);
 }
+
+/* ---------------------------------------------
+     portfolio filter
+--------------------------------------------- */
+
+// Array of "#portfolioCategories .filter" elements
+const portfolioCategoriesEl = gsap.utils.toArray("#portfolioCategories .filter");
+// Array of .portfolio-item elements
+const portfolioItemsEl = gsap.utils.toArray(".portfolio-item");
+
+function updateFilters(e) {
+  // capture the current state of portfolioItemsEl
+  const state = Flip.getState(portfolioItemsEl);
+
+  // remove the .active class from all .filter elements
+  portfolioCategoriesEl.forEach((cat) => cat.classList.remove("active"));
+
+  // add the .active class for the element that was clicked
+  e.target.classList.add("active");
+
+  // get the category that was clicked e.g. rails or javascript
+  const selectedCategory = e.target.dataset.filter;
+
+  console.log(selectedCategory);
+
+  if (selectedCategory == "*") {
+    // display all items
+    portfolioItemsEl.forEach((i) => (i.style.display = "block"));
+  } else {
+    // display only items that match
+    portfolioItemsEl.forEach((i) => (i.style.display = i.dataset.category == selectedCategory ? "block" : "none"));
+  }
+
+  // Animate from the previous state
+  Flip.from(state, {
+    duration: 1,
+    scale: true,
+    absolute: true,
+    ease: "power1.inOut",
+    onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 1 }),
+    onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: 0, duration: 1 }),
+  });
+}
+
+gsap.from(".portfolio-item", {
+  duration: 2,
+  scale: 0.8,
+  opacity: 0,
+  delay: 0.5,
+  stagger: 0.2,
+  ease: "elastic",
+  force3D: true,
+});
+
+// When a portfolio category is clicked call the updateFilters function
+portfolioCategoriesEl.forEach((cat) => cat.addEventListener("click", updateFilters));
