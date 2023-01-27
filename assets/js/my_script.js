@@ -4,42 +4,35 @@ const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootst
 /* ---------------------------------------------
 Mobile-menu
 --------------------------------------------- */
-const navSlide = () => {
-  const burger = document.querySelector(".mobile-menu-btn");
-  const nav = document.querySelector(".main-nav-js");
-  const navLinks = document.querySelectorAll(".main-nav-js .menu-list .menu-item");
+const burger = document.querySelector(".mobile-menu-btn");
+const nav = document.querySelector(".main-nav-js");
+const navLinks = document.querySelectorAll(".main-nav-js .menu-list .menu-item");
 
-  const menuClose = document.querySelector(".menu-close-btn");
+const menuCloseBtn = document.querySelector(".menu-close-btn");
 
-  burger.addEventListener("click", () => {
-    nav.classList.add("show-menu");
-
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.4s ease forwards ${index / 10 + 0.5}s `;
-      }
-    });
-    // burger.classList.toggle("toggle");
+function addAnimationToNavLinks() {
+  navLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 0.4s ease forwards ${index / 10 + 0.5}s `;
+    }
   });
+}
 
-  menuClose.addEventListener("click", () => {
-    nav.classList.remove("show-menu");
+// When the burger button is clicked, show the menu and add animation to the nav links
+burger.addEventListener("click", () => {
+  nav.classList.add("show-menu");
+  addAnimationToNavLinks();
+  // burger.classList.toggle("toggle");
+});
 
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.4s ease forwards ${index / 10 + 0.5}s `;
-      }
-    });
-
-    // burger.classList.toggle("toggle");
-  });
-};
-
-navSlide();
+// When the close button is clicked, hide the menu and add animation to the nav links
+menuCloseBtn.addEventListener("click", () => {
+  nav.classList.remove("show-menu");
+  addAnimationToNavLinks();
+  // burger.classList.toggle("toggle");
+});
 
 /* ---------------------------------------------
 mobile-drop-down
